@@ -1,0 +1,13 @@
+beautifulsoup4
+fastapi
+httpx
+lxml
+numpy
+pandas
+pydantic
+requests
+starlette
+uvicorn
+python-dotenv
+
+
