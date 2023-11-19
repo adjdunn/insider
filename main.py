@@ -23,7 +23,7 @@ async def get_insider_ownership(symbol: str):
         return symbol
         
         #data = await insider_owner_table(symbol)
-        return data.to_dict(orient='records')
+        #return data.to_dict(orient='records')
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
         
