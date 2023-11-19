@@ -55,11 +55,11 @@ def insider_title(df, name):
     return title
 
 async def shares_owned(df, name):
-    try:
-        filing_url = df[(df.reportingName == name) & (df.securityName.str.contains('Common Stock'))]['link'].values[0]
-        total_shares_owned = await scrape_insider_edgar(filing_url)
-    except:
-        total_shares_owned = 0
+#    try:
+    filing_url = df[(df.reportingName == name) & (df.securityName.str.contains('Common Stock'))]['link'].values[0]
+    total_shares_owned = await scrape_insider_edgar(filing_url)
+#    except:
+#        total_shares_owned = 0
     return total_shares_owned
 
 def last_transaction(df, name):
