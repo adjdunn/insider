@@ -71,8 +71,6 @@ def last_transaction(df, name):
 
 async def insider_owner_table(symbol):
     df = await insider_transactions(symbol)
-
-    return df
     
     names = set(df.reportingName.values.tolist())
     transaction_df = insider_transactions_df(df)
@@ -95,6 +93,6 @@ async def insider_owner_table(symbol):
     insider_df = pd.DataFrame(insider_dataset, columns=columns)
     insider_df.sort_values(by='percent_total', ascending=False, inplace=True)
     
-    insider_df = insider_df[insider_df.percent_total > 0]
+    #insider_df = insider_df[insider_df.percent_total > 0]
     
     return insider_df
