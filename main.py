@@ -5,6 +5,7 @@ Created on Fri Nov 17 13:39:54 2023
 @author: aaron
 """
 
+import os
 from fastapi import FastAPI, HTTPException
 from typing import Optional
 from insider_ownership import insider_owner_table
