@@ -71,6 +71,8 @@ def last_transaction(df, name):
 
 async def insider_owner_table(symbol):
     df = await insider_transactions(symbol)
+
+    return df
     
     names = set(df.reportingName.values.tolist())
     transaction_df = insider_transactions_df(df)
