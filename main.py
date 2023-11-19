@@ -20,7 +20,8 @@ app = FastAPI()
 @app.get("/insider-ownership/{symbol}")
 async def get_insider_ownership(symbol: str):
     try:
-        return symbol
+        api_key = os.getenv('FMP_API_KEY')
+        return api_key
         
         #data = await insider_owner_table(symbol)
         #return data.to_dict(orient='records')
